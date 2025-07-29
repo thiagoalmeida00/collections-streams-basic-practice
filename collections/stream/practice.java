@@ -66,10 +66,29 @@ public class practice {
         System.out.println(studentsSet);
         System.out.println(studentsMap);
 
-        //3
+        //3 getting elements
+        System.out.println("3 --->");
         //List
+        List<String> employeesList = List.of("João", "Maria", "Ana", "Pedro", "Antõnio");
+        String secondPersonList = employeesList.get(1);
+        Integer sizeList = employeesList.size();
+        System.out.println("A segunda pessoa da lista é: " + secondPersonList);
+        System.out.println("Total de funcionários: " + sizeList);
+
         //Set
+        Set<String> employeesSet = Set.of("João", "Maria", "Ana", "Pedro", "Antõnio");
+        String secondPersonSet = employeesSet.stream().skip(1).findFirst().get();
+        Integer sizeSet = employeesSet.size();
+        System.out.println("A segunda pessoa da lista é: " + secondPersonSet);
+        System.out.println("Total de funcionários: " + sizeSet);
+
         //Map
+        Map<Integer, String> employeesMap = Map.of(1, "João", 2, "Maria", 3, "Ana", 4, "Pedro", 5, "Antõnio");
+        String secondPersonMap = employeesMap.get(2);
+        Integer sizeMap = employeesMap.size();
+        System.out.println("A segunda pessoa da lista é: " + secondPersonMap);
+        System.out.println("Total de funcionários: " + sizeMap);
+
 
         // Streams
 
