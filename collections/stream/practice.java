@@ -1,6 +1,7 @@
 package collections.stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class practice {
 
@@ -89,8 +90,26 @@ public class practice {
         System.out.println("A segunda pessoa da lista é: " + secondPersonMap);
         System.out.println("Total de funcionários: " + sizeMap);
 
+        //4 unique elements
+        System.out.println("4 --->");
+        List<String> eventList = new ArrayList<>();
+        eventList.add("IA Conference Brasil");
+        eventList.add("AI Summit");
+        eventList.add("DevFest");
+        eventList.add("Cloud Expo");
+        eventList.add("IA Conference Brasil");
+        eventList.add("DevFest");
 
-        // Streams
+        Set<String> eventUniqueList = new HashSet<>(eventList);
+        System.out.println(eventUniqueList);
+
+        //5 map
+        System.out.println("5 --->");
+        Map<Integer, String> clientsMap = new HashMap<>();
+        clientsMap.put(1, "João");
+        clientsMap.put(2, "Marcos");
+        clientsMap.put(3, "Dora");
+        System.out.println("O nome do cliente com ID 2 é: " + clientsMap.get(2));
 
     }
 
