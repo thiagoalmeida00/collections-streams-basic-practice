@@ -111,6 +111,32 @@ public class practice {
         clientsMap.put(3, "Dora");
         System.out.println("O nome do cliente com ID 2 é: " + clientsMap.get(2));
 
+        //6
+        System.out.println("6 --->");
+        Map<Integer, String> employeesListMap2 = new HashMap<>();
+        employeesListMap2.put(1, "Maria");
+        employeesListMap2.put(2, "Marcos");
+        employeesListMap2.put(3, "Ana");
+        employeesListMap2.put(4, "Joana");
+        employeesListMap2.put(5, "Karen");
+
+        System.out.println("Procurando id 5");
+        int times = 2;
+        int key = 5;
+        for (int i = 0; i < times; i++) {
+            boolean idExists = false;
+
+            idExists = employeesListMap2.containsKey(key);
+
+            if (idExists) {
+                String employeeName = employeesListMap2.get(key);
+                System.out.println("O nome do cliente com ID " + key + " é: " + employeeName);
+            } else {
+                System.out.println("Cliente com ID " + key + " não encontrado");
+            }
+            key = 6;
+        }
+
     }
 
 }
