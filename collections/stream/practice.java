@@ -137,6 +137,14 @@ public class practice {
             key = 6;
         }
 
+        //7
+        System.out.println("7 --->");
+        List<String> empList = List.of("Ana", "Bruno", "Carlos", "Amanda", "Alice", "Daniel", "Caroline");
+
+        List<String> empListFinal = empList.stream()
+                .filter(f -> f.chars().count() <= 5).collect(Collectors.toUnmodifiableList());
+
+        System.out.println(empListFinal);
     }
 
 }
