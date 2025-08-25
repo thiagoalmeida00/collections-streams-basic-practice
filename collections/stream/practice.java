@@ -145,6 +145,32 @@ public class practice {
                 .filter(f -> f.chars().count() <= 5).collect(Collectors.toUnmodifiableList());
 
         System.out.println(empListFinal);
+
+        //8
+        System.out.println("8 --->");
+        List<Integer> numbers = List.of(2, 3, 5, 7, 11);
+
+        List<Integer> result = numbers.stream().map(v -> v * v).collect(Collectors.toList());
+        System.out.println("Quadrado dos números: " + result);
+
+        //9
+        System.out.println("9 --->");
+        List<Double> productsPrice = List.of(29.99, 49.50, 15.75, 99.99);
+        Double totalPriceWithoutTax = productsPrice.stream().reduce(0.0, Double::sum);
+        Double totalPriceWithTax = totalPriceWithoutTax * 1.08;
+        System.out.println("Valor total antes do imposto: " + totalPriceWithoutTax);
+        System.out.println("Valor total com imposto de 8%: " + String.format("%.2f", totalPriceWithTax));
+
+        //10
+        System.out.println("10 --->");
+        List<Double> scores = List.of(7.5, 8.0, 6.5, 9.0, 10.0);
+        Double average = (scores.stream().reduce(0.0, Double::sum))/ 5;
+        Optional lowGrade = scores.stream().reduce((a, b) -> Double.min(a, b));
+        Double highGrade = scores.stream().reduce(0.0, Double::max);
+
+        System.out.println("A média das notas é: " + average);
+        System.out.println("A menor nota foi: " + lowGrade.get());
+        System.out.println("A maior nota foi: " + highGrade);
     }
 
 }
